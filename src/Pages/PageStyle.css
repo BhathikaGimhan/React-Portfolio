@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p{
+    font-size: 19px;
+}
+
+h1{
+    @apply text-5xl font-bold ;
+}
+
+@media (min-width: 1360px) {
+    .plate{
+        width: 500px;
+        height: 500px;
+    }
+    .image{
+        width: 350px;
+        height: 350px;
+        @apply hover:w-[430px] hover:h-[430px];
+    }
+}
+@media (max-width: 1360px) {
+    .plate{
+        width: 400px;
+        height: 400px;
+        
+    }
+    .image{
+        width: 280px;
+        height: 280px;
+        @apply hover:w-[330px] hover:h-[330px];
+    }
+}
+@media (max-width: 1100px) {
+    .plate{
+        width: 300px;
+        height: 300px;
+    }
+    .image{
+        width: 200px;
+        height: 200px;
+        @apply hover:w-[230px] hover:h-[230px];
+    }
+}
+@keyframes shadow-color-change-hover{
+    0%{
+        box-shadow: 20px 2px 30px rgba(25, 0, 255, 0.575), -20px -2px 30px rgb(0, 255, 213, 0.575),  2px 20px 30px rgb(255, 0, 200, 0.575), -2px -20px 30px rgb(255, 0, 85, 0.575);
+    }
+    20%{
+        box-shadow: 20px 2px 30px rgb(255, 0, 85, 0.575), -20px -2px 30px rgb(25, 0, 255, 0.575),  2px 20px 30px rgb(0, 255, 213, 0.575), -2px -20px 30px rgb(255, 0, 200, 0.575);
+    }
+    60%{
+        box-shadow: 20px 2px 30px rgb(0, 255, 213, 0.575), -20px -2px 30px rgb(255, 0, 200, 0.575),  2px 20px 30px rgb(255, 0, 85, 0.575), -2px -20px 30px rgb(25, 0, 255, 0.575);
+    }
+    100%{
+        box-shadow: 20px 2px 30px rgb(25, 0, 255, 0.575), -20px -2px 30px rgb(0, 255, 213, 0.575),  2px 20px 30px rgb(255, 0, 200, 0.575), -2px -20px 30px rgb(255, 0, 85, 0.575);
+    }
+}
+@keyframes shadow-color-change{
+    0%{
+        box-shadow: 20px 2px 50px rgba(25, 0, 255, 0.575), -20px -2px 50px rgb(0, 255, 213, 0.575),  2px 20px 50px rgb(255, 0, 200, 0.575), -2px -20px 50px rgb(255, 0, 85, 0.575);
+    }
+    20%{
+        box-shadow: 20px 2px 50px rgb(255, 0, 85, 0.575), -20px -2px 50px rgb(25, 0, 255, 0.575),  2px 20px 50px rgb(0, 255, 213, 0.575), -2px -20px 50px rgb(255, 0, 200, 0.575);
+    }
+    60%{
+        box-shadow: 20px 2px 50px rgb(0, 255, 213, 0.575), -20px -2px 50px rgb(255, 0, 200, 0.575),  2px 20px 50px rgb(255, 0, 85, 0.575), -2px -20px 50px rgb(25, 0, 255, 0.575);
+    }
+    100%{
+        box-shadow: 20px 2px 50px rgb(25, 0, 255, 0.575), -20px -2px 50px rgb(0, 255, 213, 0.575),  2px 20px 50px rgb(255, 0, 200, 0.575), -2px -20px 50px rgb(255, 0, 85, 0.575);
+    }
+}
+.main-color{
+    @apply text-blue-500;
+}
+
+.home{
+    @apply relative top-10 flex flex-col;
+}
+
+.image-area{
+    @apply 
+        flex 
+        justify-center
+
+        lg:w-2/4 
+        lg:h-screen 
+        lg:items-center 
+        
+        max-lg:relative 
+        max-lg:top-20 
+    
+    ;
+}
+.image-area-lg{
+    @apply 
+        flex 
+        justify-center
+
+        lg:w-2/4 
+        lg:h-screen 
+        lg:items-center 
+        
+        max-lg:relative 
+        max-lg:top-20 
+    
+    ;
+}
+
+.plate{
+    @apply
+        items-center 
+        justify-center 
+        
+        rounded-full
+        bg-neutral-800
+        shadow-lg
+        shadow-black
+
+        lg:flex 
+        lg:flex-col 
+
+        max-lg:h-96 
+        max-lg:w-96
+        ;
+}
+.image{
+    @apply
+        max-lg:h-72 max-lg:w-72
+        rounded-full
+        bg-neutral-200
+        items-center
+        justify-center
+        relative
+        m-auto
+        transition-all
+        hover:max-lg:h-80
+        hover:max-lg:w-80
+        hover:max-lg:top-8
+        max-lg:top-12
+        
+        ;
+        animation: shadow-color-change 5s ease-in-out infinite alternate;
+}
+.text-area{
+    @apply 
+        flex 
+        right-0 
+
+        lg:justify-center 
+        lg:w-2/4 
+        lg:h-screen
+        lg:items-center 
+        lg:mr-20 
+        lg:ml-20
+        lg:absolute 
+
+        max-lg:m-10
+        max-lg:top-40
+        max-lg:relative
+    ;
+}
+.text{
+    @apply
+        text-center
+
+        lg:text-left
+
+        max-lg:relative 
+        max-lg:bottom-0;
+}
+
+
+.about{
+    @apply m-20 relative;
+}
+.about-container-lg{
+    @apply top-56 relative bg-slate-900;
+}
+
+.left-side{
+    @apply flex-initial inline-flex gap-80 absolute text-center ml-[90px];
+}
+.bg{
+    @apply bg-neutral-800 p-5 w-52 h-52 rounded-full shadow-lg shadow-black ;
+}
+

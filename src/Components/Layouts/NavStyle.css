@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header{
+    @apply flex lg:flex-initial max-lg:w-screen max-lg:h-16 lg:h-24 max-lg:z-20 lg:items-center lg:justify-between lg:px-4 lg:py-3 font-medium lg:text-lg fixed lg:top-0 lg:w-full lg:z-50;
+    backdrop-filter: blur(10px);
+}
+.items{
+    @apply flex flex-col lg:flex-row lg:items-center lg:justify-between lg:gap-6 lg:px-4 lg:py-3 lg:mr-10 lg:relative max-lg:hidden;
+}
+.logo{
+    @apply font-black text-2xl lg:text-3xl lg:ml-14 max-lg:relative max-lg:top-3 max-lg:left-3;
+    animation: animate 2s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        text-shadow: 20px 2px 40px rgb(25, 0, 255), -20px -2px 40px rgb(0, 255, 213);
+    }
+    50%{
+        text-shadow: 20px 2px 40px rgba(0, 255, 213), -20px -2px 40px rgb(132, 0, 255);
+    }
+    100%{
+        text-shadow: 20px 2px 40px rgb(25, 0, 255), -20px -2px 40px rgb(0, 255, 213);
+    }
+}
+
+@keyframes box-animate{
+    0%{
+        box-shadow:5px 2px 20px rgba(0, 195, 255, 0.459), -5px -2px 20px rgba(153, 0, 255, 0.459);
+    }
+    50%{
+        box-shadow:5px 2px 20px rgba(38, 0, 255, 0.459), -5px -2px 20px rgba(0, 195, 255, 0.459);
+    }
+    100%{
+        box-shadow:5px 2px 20px rgba(0, 195, 255, 0.459), -5px -2px 20px rgba(153, 0, 255, 0.459);
+    }
+}
+.item{
+    @apply hover:text-blue-200 lg:ml-10 lg:shadow-2xl shadow-white lg:hover:cursor-pointer transition-all duration-200 ease-in-out;
+}
+.item:hover{
+    text-shadow:0px 0px 20px rgb(0, 195, 255);
+}
+.burger{
+    @apply lg:hidden fixed right-5 box-border top-4 bg-neutral-800 rounded-lg p-2;
+    animation: box-animate 2s linear infinite;
+
+}
+.sideNavItems{
+    @apply lg:hidden z-30 h-screen w-36 fixed top-0 right-0 bg-neutral-900 backdrop-blur-lg flex flex-col drop-shadow-sm items-center shadow-blue-400 justify-center;
+}
+.sideNavItem{
+    @apply font-black relative text-white hover:text-blue-200 justify-center cursor-pointer p-5;
+}
+Link{
+    @apply text-black cursor-pointer hover:text-blue-200;
+}
+.sideNavItem:hover{
+    text-shadow:0px 0px 20px rgb(0, 195, 255);
+}
+.closeBtn{
+    @apply bg-transparent;
+}
