@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .header{
-    @apply flex lg:flex-initial max-lg:w-screen max-lg:h-16 lg:h-24 max-lg:z-20 lg:items-center lg:justify-between lg:px-4 lg:py-3 font-medium lg:text-lg fixed lg:top-0 lg:w-full lg:z-50;
+    @apply flex lg:flex-initial max-lg:w-full max-lg:h-16 lg:h-24 max-lg:z-20 lg:items-center lg:justify-between lg:px-4 lg:py-3 font-medium lg:text-lg fixed lg:top-0 lg:w-full lg:z-50;
     backdrop-filter: blur(10px);
 }
 .items{
@@ -62,4 +62,7 @@ Link{
 }
 .closeBtn{
     @apply bg-transparent;
+}
+.main-border{
+    @apply absolute;
 }

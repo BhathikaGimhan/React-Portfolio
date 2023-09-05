@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.normalizeScroll(true)
 
-const Home = ({timeline,ease}) => {
+const Home = () => {
   useEffect(() => {
     gsap.to(".curser-point", { opacity: 0, repeat: -1, yoyo: true, duration: 0.5, ease: "none" });
     let tlMaster = gsap.timeline({ repeat: -1, repeatDelay: 1 });
@@ -28,14 +28,14 @@ const Home = ({timeline,ease}) => {
   let p =useRef(null);
 
   useEffect(() => {
-    timeline.from([plate], 1.2, {
+    gsap.from([plate], 1.2, {
       y: -700,
       ease: "bounce.out",
       scale: 2.5,
       opacity: 0,
     })
     
-  });
+  },[]);
   const newtimeline = gsap.timeline();
   useEffect(() => {
     newtimeline.from([text,p], 1,{
@@ -58,7 +58,7 @@ const Home = ({timeline,ease}) => {
         trigger: ".image-area-lg",
         pin: true,
         start: "top 50px",
-        end: "+=1300",
+        end: "+=2150",
         // markers: true,
       });
     }
@@ -82,7 +82,7 @@ const Home = ({timeline,ease}) => {
         </div>
         <div className="text-area">
             <div className="text">
-              <div className="text-1 ">
+              <div className="text-1">
                 <h1 ref={el => text = el}>Say Hi <span className='animate-emoji'>👋</span> from <br /><span className='main-color'>Bhathika Gimhan</span>,<br /> <span id="animete-text"></span><span className='curser-point'>_</span></h1>
               </div>
                 <br />
