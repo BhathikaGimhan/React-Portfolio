@@ -18,8 +18,7 @@ const About = () => {
     });
   
     tl.from(".exp-lg, .project-lg", {scale: 1, x:-500, opacity: 0, duration: 0.1, pin:true, })
-    tl.from(rightSide,{scale: 1, x:500, opacity: 0, duration: 0.1, pin:true, 
-  })
+    tl.from(rightSide,{scale: 1, y:-800, opacity: 0, duration: 0.1, pin:true, })
   }, []);
   return (
     <div className='about' id='About'>
@@ -36,7 +35,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="about-right-side-lg" ref={el => rightSide = el}>
+        <div className="about-right-side-lg absolute" ref={el => rightSide = el}>
             <h1 className="title">Every great design begin with an even <span className='main-color'>better story</span> </h1>
           <div className="about-me">
             <p>Since beginning my journey as a freelance designer nearly 3 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use. I'm quietly confident, naturally curious, and perpetually working on improving my chopsone design problem at a time.</p>

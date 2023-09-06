@@ -153,8 +153,6 @@ h1{
         lg:w-2/4 
         lg:h-screen
         lg:items-center 
-        lg:mr-20 
-        lg:ml-20
         lg:absolute 
 
         max-lg:m-10
@@ -179,7 +177,7 @@ h1{
     @apply relative flex flex-col justify-center items-center ;
 }
 .about-left-side-lg{
-    @apply flex justify-center items-center gap-9 relative left-10 -top-80;
+    @apply flex justify-center items-center gap-9 relative left-52 -z-50 -top-52;
 }
 
 .about-right-side-lg{
