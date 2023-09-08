@@ -63,6 +63,11 @@ const Navigation = () => {
             </Link>
           </div>
           <div className="item">
+            <Link to="Resume" spy={true} smooth={true} offset={50} duration={500}>
+            Resume
+            </Link>
+          </div>
+          <div className="item">
             <Link to="Contact" spy={true} smooth={true} offset={50} duration={500}>
               Contact
             </Link>
@@ -92,6 +97,11 @@ const Navigation = () => {
           </Link>
         </div>
         <div className="sideNavItem">
+          <Link to="Resume" spy={true} smooth={true} offset={50} duration={500}>
+          Resume
+          </Link>
+        </div>
+        <div className="sideNavItem">RESUME
           <Link to="Contact" spy={true} smooth={true} offset={50} duration={500}>
             Services
           </Link>

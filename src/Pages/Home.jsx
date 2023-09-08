@@ -33,7 +33,7 @@ const Home = () => {
       ease: "bounce.out",
       scale: 2.5,
       opacity: 0,
-    })
+    });
     
   },[]);
   const newtimeline = gsap.timeline();
@@ -48,21 +48,7 @@ const Home = () => {
     });
   });
   
-  useEffect(() => {
-    // Check if the element is available in the DOM
-    const imageAreaLG = document.querySelector(".image-area-lg");
-    
-    if (imageAreaLG) {
-      // Set up ScrollTrigger when the element is available
-      ScrollTrigger.create({
-        trigger: ".image-area-lg",
-        pin: true,
-        start: "top 50px",
-        end: "+=2150",
-        // markers: true,
-      });
-    }
-  }, []);
+  
 
   return (
     <div className='home w-full h-[120vh]' id='Home'>
@@ -74,9 +60,9 @@ const Home = () => {
             </div>
         </div>
         <div className="image-area-lg max-lg:hidden">
-            <div className="plate" ref={el => plate = el}>
+            <div className="plate fixed" ref={el => plate = el}>
                 <div className="image">
-                <h1>asdfasd</h1>
+                {/* <h1>asdfasd</h1> */}
                 </div>
             </div>
         </div>

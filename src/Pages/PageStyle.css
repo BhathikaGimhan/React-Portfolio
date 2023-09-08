@@ -9,6 +9,27 @@ p{
 h1{
     @apply lg:text-5xl max-lg:text-3xl font-bold ;
 }
+h2{
+    @apply lg:text-4xl max-lg:text-2xl font-bold ;
+}
+h3{
+    @apply lg:text-3xl max-lg:text-xl font-bold ;
+}
+h4{
+    @apply lg:text-2xl max-lg:text-lg font-bold ;
+}
+h5{
+    @apply lg:text-xl max-lg:text-base font-bold ;
+}
+h6{
+    @apply lg:text-lg max-lg:text-sm font-bold ;
+}
+code{
+    @apply text-lg font-serif font-bold ;
+}
+.dark-main{
+    @apply text-[#727272];
+}
 
 @media (min-width: 1360px) {
     .plate{
@@ -87,6 +108,7 @@ h1{
 
         lg:w-2/4 
         lg:h-screen 
+        lg:-m-7
         lg:items-center 
         
         max-lg:relative 
@@ -170,6 +192,8 @@ h1{
         max-lg:bottom-0;
 }
 
+/* about section */
+
 .about{
     @apply w-full h-[300vh];
 }
@@ -177,7 +201,7 @@ h1{
     @apply relative flex flex-col justify-center items-center ;
 }
 .about-left-side-lg{
-    @apply flex justify-center items-center gap-9 relative left-52 -z-50 -top-52;
+    @apply flex justify-center items-center gap-9 relative left-20 -z-50 -top-52;
 }
 
 .about-right-side-lg{
@@ -192,4 +216,29 @@ h1{
 }
 .about-right-side{
     @apply flex flex-col justify-center items-center gap-9 relative ;
+}
+.bakground-text{
+    @apply text-[300px] text-[#ffffff10] -z-50 font-bold absolute -top-36 -right-32;
+}
+
+/* end about section */
+
+.resume-right{
+    @apply w-full relative -top-[1800px] left-0  flex flex-col items-end gap-9
+     ;
+}
+.heading{
+    @apply absolute flex right-72;
+}
+/* .resume{
+    @apply flex flex-col relative gap-7;
+} */
+.resume-container{
+    @apply flex flex-col relative top-20;
+}
+.resume-header{
+    @apply relative gap-7
+}
+.resume-body{
+    @apply relative gap-5
 }

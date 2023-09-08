@@ -4,6 +4,7 @@ import Home from "./Home"
 import About from "./About"
 import Contact from "./Contact"
 import React from 'react'
+import Resume from "./Resume";
 
 
 const LandingPage = () => {
@@ -14,6 +15,7 @@ const LandingPage = () => {
         <div className="container">
           <Home />
           <About />
+          <Resume />
           <Contact />
         </div>
         
